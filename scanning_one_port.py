@@ -23,7 +23,7 @@ def port_scan(ipaddress, port):
         second_sock.connect((ipaddress, port))
         print('[+] Port '+ str(port) + ' is open')
     except:
-        print('[!] Port ' + str(port) +  ' is closed')
+        pass #this will not print anything and just scan another function for the same.
 
 targets = input('[+] Enter the target/s to scan: (split multiple targets with,):') #taking input from users
 if ',' in targets: #if there is , in targets means use is specifying multiple targets otherwise not.
